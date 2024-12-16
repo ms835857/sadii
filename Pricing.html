@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SA ARCHIWORKS</title>
+	<link rel="shortcut icon" href="My logo.jpeg">
+    <link rel="stylesheet" href="css/styles.css">
+	<a href="Java for home.js"></a>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+				<li><a href="Index.html" class="menu">Home</a></li>
+                <li><a href="Index.html#services" class="menu">Services</a></li>
+				<li><a href="Pricing.html" class="menu">Pricing</a></li>
+                <li><a href="Index.html#about" class="menu">About Us</a></li>
+                <li><a href="Index.html#contact" class="menu">Contact</a></li>
+				<li><a href="Index.html#faq" class="menu">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+	
+	 <section class="pricing-section">
+      <div class="pricing-plans">
+        <div class="pricing-plan">
+            <img src="https://i.imgur.com/gXHCy6h.jpeg" alt="Package 1">
+            <h3>Basic Plan</h3>
+            <p>* Detailed Design Plans</p>
+            <p style="color: #C0AE6E;">Price: Rs: 20/Sqft</p>
+            <button class="choose-plan">Choose Plan</button>
+        </div>
+
+        <div class="pricing-plan">
+            <img src="https://i.imgur.com/xBd1fuo.jpeg" alt="Package 2">
+            <h3>Standard Plan</h3>
+            <p>* Detailed Design Plans<br>* Cost Estimation</p>
+            <p style="color: #C0AE6E;">Price: Rs: 30/Sqft</p>
+            <button class="choose-plan">Choose Plan</button>
+        </div>
+
+        <div class="pricing-plan">
+            <img src="https://i.imgur.com/JxkqEjX.jpeg" alt="Package 3">
+            <h3>Premium Plan</h3>
+            <p>* Detailed Design Plans<br>* Cost Estimation<br>* Construction Supervision</p>
+            <p style="color: #C0AE6E;">Price: Rs: 35/Sqft</p>
+            <button class="choose-plan">Choose Plan</button>
+        </div>
+    </div>
+    </section>
+	
+	<div class="overlay"></div>
+    <div class="popup">
+        <h2>Enter Your Details</h2>
+        <form id="details-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="plot-size">Your Plot Size in Marla:</label>
+            <input type="number" id="plot-size" placeholder="Enter plot size" required>
+
+            <label for="location">Plot Location:</label>
+            <input type="text" id="location" placeholder="Enter plot location" required>
+
+            <label for="requirements">Design Requirements:</label>
+            <textarea id="requirements" rows="4" placeholder="Enter any specific requirements"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+        <button onclick="closePopup()">Close</button>
+    </div>
+	
+
+ <footer>
+        <p>&copy; 2024 SA ARCHIWORKS</p>
+ </footer>
+	
+	
+	
+	
+	<script>
+        // Get elements
+        const popup = document.querySelector('.popup');
+        const overlay = document.querySelector('.overlay');
+        const choosePlanButtons = document.querySelectorAll('.choose-plan');
+        const form = document.getElementById('details-form');
+
+        // Show popup when "Choose Plan" is clicked
+        choosePlanButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                popup.style.display = 'block';
+                overlay.style.display = 'block';
+            });
+        });
+
+        // Close popup function
+        function closePopup() {
+            popup.style.display = 'none';
+            overlay.style.display = 'none';
+        }
+
+        // Handle form submission
+        form.addEventListener('submit', (e) => {
+            e.preventDefault(); // Prevent page reload
+            alert('Details Submitted! Thank you.');
+            closePopup(); // Close the popup
+        });
+    </script>
+	
+	
+	
+</body>
+</html>
